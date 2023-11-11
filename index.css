@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.drawer-img {
+    height: 300px;
+    vertical-align: top;
+
+}
+
+.right-side-container {
+    padding: 45px;
+    box-shadow: 2px 2px 5px rgba(172, 172, 172, 0.5);
+    /* border: 1px solid black; */
+}
+
+.home-styling {
+    width: 380px;
+    margin-top: 0;
+    letter-spacing: 1px;
+    vertical-align: top;
+    color: hsl(217, 19%, 35%);
+    font-size: 20px;
+}
+
+.tips {
+    font-size: 14px;
+    color: hsl(214, 17%, 51%);
+    width: 400px;
+}
+
+.user-container {
+    position: relative;
+    width: 380px;
+}
+
+.image-container {
+    display: inline-block;
+}
+
+.avatar {
+    height: 35px;
+    border-radius: 25px;
+}
+
+.info {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 18px;
+    margin-left: 20px;
+
+}
+
+.name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.date {
+    color: hsl(214, 17%, 51%);
+    font-size: 12px;
+}
+
+.share-btn {
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px 14px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
