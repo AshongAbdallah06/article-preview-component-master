@@ -2,10 +2,10 @@
 
 body {
     background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope", sans-serif;
 }
 
 main {
-    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -20,6 +20,7 @@ main {
 .right-side-container {
     padding: 45px;
     box-shadow: 2px 2px 5px rgba(172, 172, 172, 0.5);
+    background-color: white;
     /* border: 1px solid black; */
 }
 
@@ -77,11 +78,57 @@ main {
     position: absolute;
     right: 0;
     top: 5px;
-    background-color: hsl(210, 46%, 95%);
+    background-color: hsla(217, 19%, 35%, 0.1);
     padding: 10px 14px;
     border-radius: 25px;
     cursor: pointer;
 }
+
+.share-options {
+    display: none;
+    position: absolute;
+    background-color: hsl(217, 19%, 35%);
+    padding: 10px 15px;
+    top: -50px;
+    color: hsl(214, 17%, 51%);
+    font-size: 12px;
+    right: -85px;
+    margin-bottom: -200px;
+    letter-spacing: 5px;
+    border-radius: 10px;
+    /* display: inline-block; */
+}
+
+.icons {
+    height: 18px;
+}
+
+.Share-Options {
+    display: initial;
+}
+
+.share-options span {
+    cursor: pointer;
+}
+
+.share-options span::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -20px; /* Adjust this value based on the desired width of the nose */
+    border-width: 12px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent; /* Match the tooltip background-color */
+}
+
+
+.icons {
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
 
 
 
