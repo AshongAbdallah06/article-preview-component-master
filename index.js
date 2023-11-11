@@ -1,6 +1,14 @@
 let shareButton = document.querySelector('.js-share-btn');
 shareButton.addEventListener('click', () => {
 
-    document.querySelector('.share-options').classList.add('Share-Options')
+    const shareOptions = document.querySelector('.share-options');
+
+    if (!shareOptions.classList.contains('is-sharing')) {
+        document.querySelector('.share-options').classList.add('is-sharing')
+    } else {
+        document.querySelector('.share-options').classList.remove('is-sharing')
+
+    }
+    
 })
 
