@@ -77,19 +77,26 @@ main {
     text-align: right;
     position: absolute;
     right: 0;
-    top: 5px;
     background-color: hsla(217, 19%, 35%, 0.1);
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-radius: 25px;
     cursor: pointer;
 }
 
+.Share-btn {
+    background-color: hsla(217, 19%, 35%, 0.7);
+}
+
+.share-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(500%);
+}
+  
 .share-options {
     display: none;
     position: absolute;
     background-color: hsl(217, 19%, 35%);
     padding: 10px 15px;
-    top: -50px;
+    top: -55px;
     color: hsl(214, 17%, 51%);
     font-size: 12px;
     right: -85px;
