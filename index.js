@@ -2,53 +2,82 @@ const shareButton = document.querySelector('.js-share-btn');
 
 let main = document.getElementById('main');
 
-shareButton.addEventListener('click', () => {
+// const shareButton = document.querySelector('.share-button');
+const shareOptionsColumn = document.querySelector('.share-options-column');
 
-    const shareOptionsColumn = document.querySelector('.share-options-row');
+function checkStyles() {
+  const width = window.innerWidth;
+  const computedStyle = window.getComputedStyle(main);
+  const flexDirection = computedStyle.getPropertyValue('flex-direction');
 
+  if (width <= 700 && flexDirection === 'column') {
+    // Your code here for when the page width is 700 pixels or less and main is in column direction
 
-
-
-    let computedStyle = window.getComputedStyle(main);
-    let flexDirection = computedStyle.getPropertyValue('flex-direction');
-
-    if (flexDirection === 'column') {
-    //   alert('Main is in column direction.');
-
-    document.querySelector('.user-container').innerHTML = ''; 
-
-    document.querySelector('.c').innerHTML = `
+    document.querySelector('.mobile-share').innerHTML = `
     <span class="share-options-column">
-    <span class="container">
+        <span class="container">
+            <span class="tooltip">SHARE</span>
+            <img src="images/icon-facebook.svg" class="icons-column" alt="facebook icon">
+            <img src="images/icon-twitter.svg" class="icons-column" alt="twitter-icon">
+            <img src="images/icon-pinterest.svg" class="icons-column" alt="pinterest-icon">
+        </span>
+
+        <img class="mobile-share-svg" src="images/icon-share.svg" alt="">
+
+    </span>`
+    
+    document.querySelector('.share-options-column').classList.add('is-sharing-options')
+
+    document.querySelector('.user-container').classList.add('remove-user-container')
+  } else {
+    // Your code here for other cases
+
+    document.querySelector('.user-container').classList.remove('remove-user-container');
+
+
+
+    let isSharing = document.querySelector('.share-options-row');
+    if (!isSharing.classList.contains("is-sharing")) {
+        isSharing.classList.add("is-sharing");
+        document.querySelector('.share-options-row').innerHTML = `
         <span class="tooltip">SHARE</span>
-        <img src="images/icon-facebook.svg" class="icons-column" alt="facebook icon">
-        <img src="images/icon-twitter.svg" class="icons-column" alt="twitter-icon">
-        <img src="images/icon-pinterest.svg" class="icons-column" alt="pinterest-icon">
-    </span>
-
-
-        <div class="share-btn js-share-btn">
-        <img class="share-svg" src="images/icon-share.svg" alt="">
-      </div>
-    </span>
-    `
-
+        <img src="images/icon-facebook.svg" class="icons" alt="facebook icon">
+        <img src="images/icon-twitter.svg" class="icons" alt="twitter-icon">
+        <img src="images/icon-pinterest.svg" class="icons" alt="pinterest-icon">
+        `        
+        document.querySelector('.share-svg').classList.add("share-icon");
+        document.querySelector('.js-share-btn').classList.add("Share-btn");
 
 
     } else {
-      alert('Main is NOT in column direction.');
-      if (!shareOptionsColumn.classList.contains('is-sharing')) {
-        shareOptionsColumn.classList.add('is-sharing');
-        document.querySelector('.share-btn').classList.add('Share-btn');
-        document.querySelector('.share-svg').classList.add('share-icon')
+        isSharing.classList.remove("is-sharing");
 
-    } else {
-        shareOptionsColumn.classList.remove('is-sharing');
-        document.querySelector('.share-btn').classList.remove('Share-btn');
-        document.querySelector('.share-svg').classList.remove('share-icon')
-    }
-      // Your code here for when main is NOT in column direction
+        document.querySelector('.share-svg').classList.remove("share-icon")
+        document.querySelector('.js-share-btn').classList.remove("Share-btn");
+
+
     }
 
-})
 
+  }
+}
+
+// Initial check on page load
+// checkStyles();
+
+// Check styles when the window is resized
+window.addEventListener('resize', () => {
+    const width = window.innerWidth;
+    const computedStyle = window.getComputedStyle(main);
+    const flexDirection = computedStyle.getPropertyValue('flex-direction');
+  
+    if (width > 700) {
+        document.querySelector('.user-container').classList.remove('remove-user-container')
+    }
+
+});
+// Check styles when the button is clicked
+shareButton.addEventListener('click', () => {
+    checkStyles();
+
+});

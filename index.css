@@ -10,6 +10,7 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    flex-direction: row;
 }
 
 .drawer-img {
@@ -129,7 +130,6 @@ main {
     border-color: hsl(217, 19%, 35%) transparent transparent transparent; /* Match the tooltip background-color */
 }
 
-
 .icons {
     margin-right: 10px;
     cursor: pointer;
@@ -147,12 +147,6 @@ main {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media (max-width: 850px) {
-    .home-styling {
-        letter-spacing: normal;
-    }
-}
-
 @media (max-width: 700px) {
     main {
         flex-direction: column;
@@ -168,8 +162,13 @@ main {
         border-top-left-radius: 10px;
     }
 
+    /* .user-container {
+        display: none;
+    } */
+
     .home-styling {
         font-size: 19px;
+        letter-spacing: normal;
     }
 
     .right-side-container {
@@ -185,6 +184,10 @@ main {
 
     .share-options-row {
         display: none;
+    }
+
+    .is-sharing-options {
+        width: 806px;
     }
 }
 
@@ -202,7 +205,7 @@ main {
 
     .home-styling {
         width: 350px;
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .right-side-container {
