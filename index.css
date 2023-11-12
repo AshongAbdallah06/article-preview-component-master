@@ -92,7 +92,7 @@ main {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(500%);
 }
   
-.share-options {
+.share-options-row {
     display: none;
     position: absolute;
     background-color: hsl(217, 19%, 35%);
@@ -114,11 +114,11 @@ main {
     display: initial;
 }
 
-.share-options span {
+.share-options-row span {
     cursor: pointer;
 }
 
-.share-options span::after {
+.share-options-row span::after {
     content: " ";
     position: absolute;
     top: 100%;
@@ -154,19 +154,18 @@ main {
 }
 
 @media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        width: 450px;
+        align-items: center;
+        padding-top: 10px;
+    }
 
     .drawer-img {
         width: 445px;
         height: 280px;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
-    }
-
-    main {
-        flex-direction: column;
-        width: 450px;
-        align-items: center;
-        padding-top: 10px;
     }
 
     .home-styling {
@@ -182,6 +181,10 @@ main {
 
     .tips {
         margin-bottom: 25px;
+    }
+
+    .share-options-row {
+        display: none;
     }
 }
 
@@ -219,7 +222,7 @@ main {
         right: 40px;
     }
 
-    .share-options {
+    .share-options-row {
         right: -50px;
     }
 }

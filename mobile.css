@@ -1,0 +1,40 @@
+.c {
+    /* width: 400px; */
+
+}
+
+.share-options-column {
+    background-color: hsl(217, 19%, 35%);
+    width: 361px;
+    padding: 20px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    position: relative;
+    /* padding: 19px; */
+}
+
+.container {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.tooltip {
+    color: hsl(214, 17%, 51%);
+    letter-spacing: 5px;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+img {
+    cursor: pointer;
+}
+
+.share-btn {
+    top: 10px;
+    right: 20px;
+    background-color: hsla(216, 36%, 67%, 0.1);
+    cursor: pointer;
+}
