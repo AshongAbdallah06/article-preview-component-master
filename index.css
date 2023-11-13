@@ -186,9 +186,10 @@ main {
         display: none;
     }
 
-    .is-sharing-options {
+    /* .is-sharing-options {
         width: 806px;
-    }
+        height: 300px;
+    } */
 }
 
 @media (max-width: 500px) {
@@ -199,30 +200,30 @@ main {
     }
 
     .drawer-img {
-        width: 400px;
+        width: 360px;
         height: 250px;
     }
 
     .home-styling {
-        width: 350px;
+        width: 320px;
         font-size: 17px;
     }
 
     .right-side-container {
-        width: 340px;
+        width: 300px;
         /* padding: 20px 20px; */
         padding-left: 30px;
         /* padding-left: 40px; */
     }
 
     .tips {
-        width: 350px;
+        width: 310px;
         font-size: 13px;
         margin-bottom: 30px;
     }
 
     .share-btn {
-        right: 40px;
+        right: 80px;
     }
 
     .share-options-row {

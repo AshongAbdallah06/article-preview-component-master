@@ -1,6 +1,5 @@
 .share-options-column {
     background-color: hsl(217, 19%, 35%);
-    width: 361px;
     padding: 20px 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -44,8 +43,27 @@ img {
     right: 30px;
 }
 
+.mobile-svg {
+    display: none;
+}
+
 @media (min-width: 700px) {
     .share-options-column {
         display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    .share-options-column {
+        width: 406px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    
+    .share-options-column {
+        width: 322px;
     }
 }

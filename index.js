@@ -73,6 +73,9 @@ window.addEventListener('resize', () => {
   
     if (width > 700) {
         document.querySelector('.user-container').classList.remove('remove-user-container')
+    } else {
+        document.querySelector('.user-container').classList.add('remove-user-container')
+
     }
 
 });
@@ -80,4 +83,12 @@ window.addEventListener('resize', () => {
 shareButton.addEventListener('click', () => {
     checkStyles();
 
+
+    document.querySelector('.mobile-share-svg').addEventListener('click', () => {
+        document.querySelector('.user-container').classList.remove('remove-user-container');
+        document.querySelector('.share-options-column').classList.add('mobile-svg')
+    })
+
 });
+
+
