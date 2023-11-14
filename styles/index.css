@@ -86,9 +86,10 @@ main {
     position: absolute;
     right: 0;
     background-color: hsla(217, 19%, 35%, 0.1);
-    padding: 8px 12px;
+    padding: 12px 12px;
     border-radius: 25px;
     cursor: pointer;
+    border: none;
 }
 
 .Share-btn {
@@ -152,11 +153,15 @@ main {
 
 
 @media (max-width: 700px) {
+    body {
+        margin: 0;
+    }
+
     main {
         flex-direction: column;
         width: 450px;
         align-items: center;
-        padding-top: 10px;
+        padding-top: 0;
     }
 
     .drawer-img {
@@ -190,17 +195,15 @@ main {
         display: none;
     }
 
-    /* .is-sharing-options {
-        width: 806px;
-        height: 300px;
-    } */
+    .attribution {
+        bottom: -30px;
+    }
 }
 
 @media (max-width: 500px) {
     main {
         align-items: center;
         width: 420px;
-        padding-top: 20px;
     }
 
     .drawer-img {

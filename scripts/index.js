@@ -14,12 +14,20 @@ function checkStyles() {
         <span class="share-options-column">
             <span class="container">
                 <span class="tooltip">SHARE</span>
-                <img src="images/icon-facebook.svg" class="icons-column" alt="facebook icon">
-                <img src="images/icon-twitter.svg" class="icons-column" alt="twitter-icon">
-                <img src="images/icon-pinterest.svg" class="icons-column" alt="pinterest-icon">
+                <a href="#">
+                    <img src="images/icon-facebook.svg" class="icons-column" alt="facebook icon">
+                </a>
+                <a href="#">
+                    <img src="images/icon-twitter.svg" class="icons-column" alt="twitter-icon">
+                </a>
+                <a href="#">
+                    <img src="images/icon-pinterest.svg" class="icons-column" alt="pinterest-icon">
+                </a>
             </span>
 
-            <img class="mobile-share-svg" src="images/icon-share.svg" alt="">
+            <a href="#">
+                <img class="mobile-share-svg" src="images/icon-share.svg" alt="">
+            </a>
 
         </span>`
         
@@ -38,9 +46,15 @@ function checkStyles() {
         isSharing.classList.add("is-sharing");
         document.querySelector('.share-options-row').innerHTML = `
         <span class="tooltip">SHARE</span>
-        <img src="images/icon-facebook.svg" class="icons" alt="facebook icon">
-        <img src="images/icon-twitter.svg" class="icons" alt="twitter-icon">
-        <img src="images/icon-pinterest.svg" class="icons" alt="pinterest-icon">
+        <a href="#">
+            <img src="images/icon-facebook.svg" class="icons" alt="facebook icon">
+        </a>
+        <a href="#">
+            <img src="images/icon-twitter.svg" class="icons" alt="twitter-icon">
+        </a>
+        <a href="#">
+            <img src="images/icon-pinterest.svg" class="icons" alt="pinterest-icon">
+        </a>
         `        
         document.querySelector('.share-svg').classList.add("share-icon");
         document.querySelector('.js-share-btn').classList.add("Share-btn");
